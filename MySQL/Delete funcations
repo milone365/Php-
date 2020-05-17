@@ -1,0 +1,8 @@
+//delete element from table
+DELETE FROM `game` WHERE `game`.`ID` = 3;
+
+//delete table
+DROP TABLE game
+
+//delete database
+DROP DATABASE Games
