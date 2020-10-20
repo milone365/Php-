@@ -1,0 +1,82 @@
+//for select all row elements in the table , * is all 
+
+select * from nameOfTable 
+
+
+// selet only 1 element for every row
+
+select name from nameOfTable 
+
+
+//select multiple elements of rows from table
+
+select name, address from nameOfTable 
+
+
+//selct only differents elements from table
+
+select distinct town from client
+
+
+//select all elements with all  same key
+
+select * from client where nome = "Akira" 
+
+
+//select more than 1 element
+
+select * from client where nome = "Robo" and città="Tokyo"
+
+//elect more than 1 element
+select nome, cognome from client where città ="Tokyo"
+
+
+//or operator
+
+select * from client where ID=8 or ID=1
+
+//not operator
+
+select * from client where nome !="Robo" 
+select * from client where not nome ="Robo" 
+
+
+//oreder by, asc = ascendent , desc = descendent
+select * from client order by nome 
+select * from client order by nome desc
+select * from client order by nome asc
+
+
+//order by with multiple elements
+select * from client order by nome desc, città desc
+
+
+//or version 2
+select * from client where town in ("Roma","Tokyo")
+
+
+//select all elements end with a character
+select * from client where name like '%a'
+
+//start with r
+select * from client where name like 'r%'
+
+//
+select * from client where age between 30 and 50
+
+//count all elements of
+select count(*) from client where town ="Tokyo"
+
+//count for every group
+select count(*) from client group by town
+select town, count(*) from client group by town
+
+//add other table data
+select * from client inner join orders on client.id = orders.client_id
+
+//left join, return left table + right table comune objects
+select * from client left join orders on client.id = orders.client_id
+
+//
+select client.name, client.surname,orders.goods,orders.amount from client inner join orders on client.id = orders.client_id
+where client.town="Milano"

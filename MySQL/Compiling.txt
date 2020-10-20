@@ -1,0 +1,33 @@
+//create table
+Create TABLE game
+(title VARCHAR (20) NOT NULL,price INT);
+
+//add element to the table
+Alter Table game ADD Year INT
+
+//delete column
+Alter Table game DROP column Year
+
+//change value of column
+
+
+//delete table
+Drop Table game
+
+
+//compile table
+INSERT INTO `client` (`ID`,`nome`,`cognome`,`città`)VALUES("8","Robo","Strano","Tokyo")
+
+//compile table example 2
+
+insert into client(ID,nome,cognome,città)
+values(1,"mario","rossi","como")
+
+
+//change values
+update client
+set nome ='Wolverine', cognome="Logan"
+where id=6
+
+//delete from table
+delete from client where ID=7

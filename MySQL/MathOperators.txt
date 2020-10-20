@@ -1,0 +1,14 @@
+
+//MIN MAX
+select min(age) from client
+select max(age) from client
+
+//avarage
+select avg(age) from client
+
+//count rows with same element
+select count(town) from client where town="Tokyo"
+
+//sum
+select sum(price) from toys 
+select sum(price) from client where town="Milano"
